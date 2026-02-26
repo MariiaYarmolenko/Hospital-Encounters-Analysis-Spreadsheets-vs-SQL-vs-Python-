@@ -14,7 +14,7 @@ The goal of this project was to conduct a comparative analysis of medical encoun
 - Data Cleaning: Cleaning date and time formats.
 - Calculations: Creating a formula to find the difference between the start and end of a reception (converted to hours).
 - Reporting: Creating a Pivot Table.
-- Metrics: 'TOTAL_VISITS' , 'SUM of TOTAL_CLAIM_COST' , 'AVERAGE of TOTAL_CLAIM_COST' , 'AVERAGE of DURATION_HOURS'.
+- Metrics: ' TOTAL_VISITS ' , 'SUM of TOTAL_CLAIM_COST' , 'AVERAGE of TOTAL_CLAIM_COST' , 'AVERAGE of DURATION_HOURS'.
 
 <img width="1085" height="217" alt="Знімок екрана 2026-02-26 113319" src="https://github.com/user-attachments/assets/58a32d4a-5e61-44cc-8d06-0d421c7824b4" />
 
