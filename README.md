@@ -25,6 +25,17 @@ The goal of this project was to conduct a comparative analysis of medical encoun
 - Transformation: Adding new ```DATETIME``` columns and updating data.
 - Analytics: Writing a complex query using ```GROUP BY``` and ```TIMESTAMPDIFF```.
 
+``` SQL
+SELECT 
+    ENCOUNTERCLASS,
+    COUNT(*) AS total_visits,
+    ROUND(SUM(TOTAL_CLAIM_COST), 2) AS total_cost,
+    ROUND(AVG(TOTAL_CLAIM_COST), 2) AS avg_cost,
+    ROUND(AVG(TIMESTAMPDIFF(SECOND, Start_DateTime, Stop_DateTime) / 3600), 2) AS avg_duration_hours
+FROM encounters
+GROUP BY ENCOUNTERCLASS;
+```
+
 <img width="562" height="170" alt="Знімок екрана 2026-02-23 162507" src="https://github.com/user-attachments/assets/563b89b2-2bd5-491c-af93-98ac73bae5cb" />
 
 ### Python
@@ -33,6 +44,19 @@ The goal of this project was to conduct a comparative analysis of medical encoun
 - Cleanup: Using ```pd.to_datetime()``` to automatically recognize complex date formats.
 - Manipulation: Creating a vectorized column ```duration_hours```.
 - Aggregation: Grouping data via ```.groupby()``` and applying the ```.agg()``` method .
+
+``` Python
+import pandas as pd
+df['START'] = pd.to_datetime(df['START'])
+df['STOP'] = pd.to_datetime(df['STOP'])
+df['duration_hours'] = (df['STOP'] - df['START']).dt.total_seconds() / 3600
+
+analysis = df.groupby('ENCOUNTERCLASS').agg({
+    'Id': 'count',
+    'TOTAL_CLAIM_COST': ['sum', 'mean'],
+    'duration_hours': 'mean'
+})
+```
 
 <img width="820" height="196" alt="Знімок екрана 2026-02-26 113617" src="https://github.com/user-attachments/assets/be04ce8f-aa22-4f5c-ba98-15f21d790606" />
 
@@ -77,7 +101,7 @@ Conclusion: The cost structure shows a significant financial burden on urgent ca
 
 ## Repository structure
 
-```analysis.sql``` — SQL scripts for transformation and queries.  
-```analysis.ipynb``` — Jupyter Notebook with full Python processing cycle.  
-```formulas_guide.md``` — documentation of formulas and methods for Sheets.  
+```Hospital_Encounters_Analysis.sql``` — SQL scripts for transformation and queries.  
+```Hospital_Encounters_Analysis.ipynb``` — Jupyter Notebook with full Python processing cycle.  
+```Hospital_Encounters_Analysis_formulas_guide.md``` — documentation of formulas and methods for Sheets.  
 ```encounters.csv``` — dataset for analysis.  
