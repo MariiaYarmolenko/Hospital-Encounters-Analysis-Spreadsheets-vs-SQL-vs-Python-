@@ -40,13 +40,13 @@ The goal of this project was to conduct a comparative analysis of medical encoun
 
 ## Analysis of results and key findings
 
-# 1. Data validation and accuracy of tools
+### 1. Data validation and accuracy of tools
 
 Conclusion: The use of three independent tools (SQL, Python, Spreadsheet) allowed for a full cross-validation of the results.
 
 Details: The number of visits `total_visits` and total costs `total_cost` are identical in all environments, confirming the integrity of the data after import.
 
-# 2. Efficiency of types of medical care
+### 2. Efficiency of types of medical care
 
 Conclusion: The most resource-intensive type of admission is *Inpatient*, while *Ambulatory* (outpatient visits) make up the bulk of the appeals.
 
@@ -58,7 +58,7 @@ Key metrics:
 
 *Urgentcare* & *Wellness*: Have the shortest duration (15 min / 0.25 h), indicating the standardized and fast nature of these services.
 
-# 3. Technical conclusions (ETL and transformation)
+### 3. Technical conclusions (ETL and transformation)
 
 Conclusion: Automation via Python and SQL is significantly more robust for large data sets than manual processing in tables.
 
@@ -68,7 +68,7 @@ Python’s `pd.to_datetime` function best coped with the non-standard ISO 8601 f
 
 Using SQL allows you to work with data directly on the server, which is critical for security and performance when scaling the project.
 
-# 4. Business insights for the institution
+### 4. Business insights for the institution
 
 Conclusion: The cost structure shows a significant financial burden on urgent care *Emergency*, where the average cost (~$4,629) is the second highest after *Inpatient* care, although visits last only 1.5 hours on average. This may indicate the high cost of medical procedures in critical conditions.
 
