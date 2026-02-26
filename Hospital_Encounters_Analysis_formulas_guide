@@ -1,12 +1,12 @@
-# Довідник формул та технічних методів Google Sheets
+# Google Sheets Formula and Techniques Guide
 
-### Конвертація тривалості в години
+### Converting Duration to Hours
 
-Оскільки таблиці рахують час як частку доби (де 1 = 24 години), для отримання чистого числа годин використана формула:
-- **Формула:** `=(STOP - START) * 24`
-- **Формат комірки:** `Число` (Number) (щоб бачити десяткові частки, наприклад 9.48).
+Since spreadsheets count time as a fraction of a day (where 1 = 24 hours), the formula used to get the pure number of hours is:
+- **Formula:** `=(STOP - START) * 24`
+- **Cell Format:** `Number` (to see decimals, e.g. 9.48).
 
-### Очищення ISO-дат
+### Cleaning ISO dates
 
-Для видалення символів `T` та `Z` з тексту:
+To remove `T` and `Z` characters from text:
 - `SUBSTITUTE(SUBSTITUTE(A2; "T"; " "); "Z"; "")`
