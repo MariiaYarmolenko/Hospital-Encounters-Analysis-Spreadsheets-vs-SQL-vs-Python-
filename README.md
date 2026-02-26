@@ -103,5 +103,5 @@ Conclusion: The cost structure shows a significant financial burden on urgent ca
 
 ```Hospital_Encounters_Analysis.sql``` — SQL scripts for transformation and queries.  
 ```Hospital_Encounters_Analysis.ipynb``` — Jupyter Notebook with full Python processing cycle.  
-```Hospital_Encounters_Analysis_formulas_guide.md``` — documentation of formulas and methods for Sheets.  
+```[Hospital_Encounters_Analysis_formulas_and_methods.md](./Hospital_Encounters_Analysis_formulas_and_methods.md)``` — documentation of formulas and methods for Sheets.  
 ```encounters.csv``` — dataset for analysis.  
