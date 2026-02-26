@@ -38,11 +38,40 @@ The goal of this project was to conduct a comparative analysis of medical encoun
 
 ---
 
-## Conclusions
+## Analysis of results and key findings
 
-- Validation: All three tools produced identical results, confirming the correctness of the calculations.
-- Flexibility: Python (Pandas) proved to be the fastest at handling complex date formats.
-- Scalability: SQL is best suited for storing large amounts of data, while Sheets is ideal for instant visualization.
+# 1. Data validation and accuracy of tools
+
+Conclusion: The use of three independent tools (SQL, Python, Spreadsheet) allowed for a full cross-validation of the results.
+
+Details: The number of visits `total_visits` and total costs `total_cost` are identical in all environments, confirming the integrity of the data after import.
+
+# 2. Efficiency of types of medical care
+
+Conclusion: The most resource-intensive type of admission is *Inpatient*, while *Ambulatory* (outpatient visits) make up the bulk of the appeals.
+
+Key metrics:
+
+*Inpatient*: Highest average cost (~$7,761) and longest duration (~36.8 hours), consistent with the nature of hospitalization.
+
+*Ambulatory*: Highest volume of visits (12,537), generating the highest total revenue (~$36.2 million), despite a low average duration (~9.5 hours).
+
+*Urgentcare* & *Wellness*: Have the shortest duration (15 min / 0.25 h), indicating the standardized and fast nature of these services.
+
+# 3. Technical conclusions (ETL and transformation)
+
+Conclusion: Automation via Python and SQL is significantly more robust for large data sets than manual processing in tables.
+
+Details:
+
+Python’s `pd.to_datetime` function best coped with the non-standard ISO 8601 format without additional text manipulation.
+
+Using SQL allows you to work with data directly on the server, which is critical for security and performance when scaling the project.
+
+# 4. Business insights for the institution
+
+Conclusion: The cost structure shows a significant financial burden on urgent care *Emergency*, where the average cost (~$4,629) is the second highest after *Inpatient* care, although visits last only 1.5 hours on average. This may indicate the high cost of medical procedures in critical conditions.
+
 
 ---
 
