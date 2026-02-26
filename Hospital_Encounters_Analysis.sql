@@ -4,8 +4,8 @@ alter table hospital_db.encounters add column Start_DateTime datetime;
 alter table hospital_db.encounters add column Stop_DateTime datetime;
 
 update encounters 
-set Start_DateTime = str_to_date(replace(replace(start, 'T', ' '), 'Z', ''), '%Y-%m-%d %H:%i:%s'),
-    Stop_DateTime = str_to_date(replace(replace(start, 'T', ' '), 'Z', ''), '%Y-%m-%d %H:%i:%s');
+set Start_DateTime = str_to_date(replace(replace(START, 'T', ' '), 'Z', ''), '%Y-%m-%d %H:%i:%s'),
+    Stop_DateTime = str_to_date(replace(replace(STOP, 'T', ' '), 'Z', ''), '%Y-%m-%d %H:%i:%s');
     
 select
 	encounterclass,
