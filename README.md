@@ -21,7 +21,7 @@ The goal of this project was to conduct a comparative analysis of medical encoun
 ### SQL (MySQL Workbench)
 
 - Technical preparation: Setting up root access via terminal, creating the ```hospital_db``` database.
-- ETL: Import ```encounters.csv```. Resolved ISO 8601 format issue by disabling "Safe Update Mode" and using ```REPLACE``` and ```STR_TO_DATE``` functions .
+- ETL: Import ```encounters.csv```. Resolved ISO 8601 format issue by disabling "Safe Update Mode" and using ```set SQL_MODE = '';``` and ```STR_TO_DATE``` functions .
 - Transformation: Adding new ```DATETIME``` columns and updating data.
 - Analytics: Writing a complex query using ```GROUP BY``` and ```TIMESTAMPDIFF```.
 
