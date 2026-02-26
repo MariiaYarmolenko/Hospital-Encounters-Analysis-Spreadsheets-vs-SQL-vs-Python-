@@ -48,7 +48,7 @@ The goal of this project was to conduct a comparative analysis of medical encoun
 
 ## Repository structure
 
-```analysis.sql``` — SQL scripts for transformation and queries.
-```analysis.ipynb``` — Jupyter Notebook with full Python processing cycle.
-```formulas_guide.md``` — documentation of formulas and methods for Sheets.
-```encounters.csv``` — dataset for analysis.
+```analysis.sql``` — SQL scripts for transformation and queries.  
+```analysis.ipynb``` — Jupyter Notebook with full Python processing cycle.  
+```formulas_guide.md``` — documentation of formulas and methods for Sheets.  
+```encounters.csv``` — dataset for analysis.  
