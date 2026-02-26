@@ -1,8 +1,3 @@
-# SQL (MySQL)
-To overcome technical limitations and accurately calculate time intervals, the following commands were used:
-
-Disabling Safe Update Mode
-
 set SQL_MODE = '';
 
 alter table hospital_db.encounters add column Start_DateTime datetime;
